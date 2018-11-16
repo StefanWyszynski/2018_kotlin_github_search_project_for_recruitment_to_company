@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Github search (Stefan Wyszyński)</string>
+    <string name="fragment_search_title">Github search</string>
+    <string name="search_list_item_user_name_title">User name:</string>
+    <string name="search_list_item_repository_name_title">Repository name:</string>
+    <string name="user_info_followers_number">Followers number:</string>
+    <string name="user_info_user_name">User name:</string>
+    <string name="fragment_user_info_title">User info</string>
+</resources>

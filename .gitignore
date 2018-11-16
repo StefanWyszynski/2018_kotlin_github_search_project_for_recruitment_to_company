@@ -1,0 +1,8 @@
+/build
+/.idea
+/.gradle
+/*.iml
+/gradle/wrapper
+/gradle
+/local.properties
+/assignment_app/*.iml
