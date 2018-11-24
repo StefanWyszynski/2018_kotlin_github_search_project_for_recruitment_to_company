@@ -25,6 +25,6 @@ interface GitHubApiService {
     fun searchUsers(@Query("q") term: String): Observable<GithubUsersSearch>
 
     @Headers("Accept: application/vnd.github.mercy-preview+json")
-    @GET("https://api.github.com/users/{user}")
+    @GET("users/{user}")
     fun getUser(@Path("user") userName: String): Observable<GithubUser>
 }
