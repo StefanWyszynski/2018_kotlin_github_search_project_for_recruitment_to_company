@@ -9,6 +9,7 @@ import io.reactivex.Observable
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.functions.BiFunction
 import javax.inject.Inject
+import javax.inject.Singleton
 
 
 /*
@@ -16,6 +17,7 @@ import javax.inject.Inject
  *
  * @author Stefan Wyszynski
  */
+@Singleton
 open class SearchRepository @Inject constructor() : RepositoryBase<SearchResult>() {
 
     val disposables = CompositeDisposable()
@@ -28,6 +30,7 @@ open class SearchRepository @Inject constructor() : RepositoryBase<SearchResult>
                 return SearchResult.success(githubUsersSearch, githubReposSearch)
             }
         }
+
         val subscribe = Observable.zip(users, repos, value)
                 .subscribeOn(Shedulers.ioThread())
                 .observeOn(Shedulers.androidThread())

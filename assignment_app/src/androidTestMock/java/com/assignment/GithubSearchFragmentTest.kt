@@ -83,8 +83,7 @@ class GithubSearchFragmentTest {
 
         onView(withId(R.id.userList)).perform(RecyclerViewActions
                 .actionOnItemAtPosition<UserListAdapter.ViewHolder>(0, ViewActions.click()))
-        onView(allOf(withId(R.id.followersNumber), isDisplayed())).check(matches(withText(containsString("55"))))
-        onView(allOf(withId(R.id.userNameF), isDisplayed())).check(matches(withText(containsString("testUser"))))
-
+        onView(allOf(withId(R.id.followersNumber), isDisplayed())).check(matches(withText(containsString("1"))))
+        onView(allOf(withId(R.id.userNameF), isDisplayed())).check(matches(withText(containsString("stefanmiodrag"))))
     }
 }
